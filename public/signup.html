@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <script src="./code.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body x-data="capstone">
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <br><br>
+
+
+            <div class="col-md-8" >
+                <div class="form-control">
+                    <h3>SIGN UP</h3>
+                    <hr>
+                    <label>First Name</label>
+                    <input class="form-control" x-model="firstName" placeholder="Enter first name" /><br>
+
+                    <label>Last Name</label>
+                    <input class="form-control" x-model="lastName" placeholder="Enter first name" /><br>
+
+                    <label>Role</label>
+                    <select x-model="role" class="form-control">
+                        <option>Select Specialty</option>
+
+                        <option x-model="role" value="Mine Manager">Mine Manager</option>
+                        <option x-model="role" value="Mine Planner">Mine Planner</option>
+                        <option x-model="role" value="Mine engineer">Mine engineer</option>
+                        <option x-model="role" value="Mine Inspector">Mine Inspector</option>
+                    </select><br>
+
+                    <label>Email</label>
+                    <input class="form-control" type="email" x-model="email" placeholder="Enter email" required /><br>
+
+                    <label>Password</label>
+                    <input class="form-control" type="password" x-model="password" placeholder="Enter Password" required /> <br>
+
+                    <button @click="signUp" class="btn btn-success">SIGN UP</button><br><br>
+
+                    <p class="muted sm">Have an account already? <a href="/signin.html" >Sign in</a></p>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
+</body>
+
+</html>
